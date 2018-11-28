@@ -1,0 +1,9 @@
+.border-shadow{
+    background-color: darkgray;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: 0px 2px 2px gray;
+    width:200px;
+    
+}
