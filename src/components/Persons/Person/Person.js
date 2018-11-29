@@ -2,10 +2,7 @@ import React from 'react';
 import Classes from './Person.css';
 
 const person = (props) => {
-   const rnd = Math.random();
-    if(rnd > 0.7){
-        throw new Error("Something went wrong");
-    }
+  
     return(
         <div className={Classes.Person} >
             <h1> My Name is {props.name}</h1>

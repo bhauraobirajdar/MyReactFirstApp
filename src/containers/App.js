@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Classes from './App.css';
 
-import Person from './Person/Person';
-import Users from './Users/Users';
+import Person from '../components/Persons/Person/Person';
+import Users from '../components/Users/Users';
+
+import Persons from '../components/Persons/Persons';
 
 class App extends Component {
   state = {
@@ -94,13 +96,7 @@ class App extends Component {
     if(this.state.showName){
       person = (
         <div>
-          {this.state.Persons.map((obj,index) => {
-              return <Person name={obj.name} 
-                company={obj.company} 
-                key={obj.id}
-                textChange={(event) => this.nameChangeHandler(event,obj.id)}
-                click={() => this.deleteHandler(index)}/> 
-          })}
+         <Persons textChange={this.nameChangeHandler} clickDelete={this.deleteHandler} state={this.state}></Persons>
         
         </div> 
         
